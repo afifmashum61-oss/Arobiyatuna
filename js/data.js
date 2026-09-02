@@ -1,7 +1,7 @@
 /**
- * Data Store untuk Aplikasi Web Media Pembelajaran Bahasa Arab Interaktif
- * 3 Bab Utama dengan:
- * - 20 Mufrodat per Bab yang diambil LANGSUNG dari teks Maharah Qira'ah setiap Bab (Total 60 Mufrodat)
+ * Data Store untuk Aplikasi Web Media Pembelajaran Bahasa Arab Interaktif (Arobiyatuna)
+ * Bab 2 disesuaikan secara presisi dengan Teks Resmi Sirah Nabi Muhammad ﷺ:
+ * - 20 Mufrodat per Bab (60 Mufrodat Total)
  * - 20 Dialog Hiwar per Bab dengan Ikon Orang / Avatar Interaktif
  * - 20 Soal Istima' Berpikir Kritis per Bab (60 Soal Istima' Total) dalam Bahasa Arab
  * - Qawa'id Bab 1: Tabel Tashrif Lughawi 14 Dhomir Fi'il Madhi "اِحْتَفَلَ" (احتفل)
@@ -57,7 +57,6 @@ const arabicData = {
           }
         ]
       },
-      // 20 Mufrodat Bab 1 yang diambil LANGSUNG dari teks Qira'ah Bab 1
       mufrodat: [
         { arabic: "شَهْرُ مُحَرَّمٍ", latin: "Syahru Muharram", indo: "Bulan Muharram (Awal Tahun)", category: "الْقِرَاءَةُ - Waktu", icon: "fa-moon" },
         { arabic: "يَحْتَفِلُوْنَ", latin: "Yahkafiluna", indo: "Mereka merayakan", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-glass-cheers" },
@@ -156,43 +155,43 @@ const arabicData = {
 
 قَدْ وُلِدَ فِي يَوْمِ الاثْنَيْنِ، فِي عَامِ الْفِيلِ، الثَّانِي عَشَرَ مِنْ شَهْرِ رَبِيعِ الأَوَّلِ. اسْمُ أَبِيهِ عَبْدُ اللَّهِ بْنُ عَبْدِ الْمُطَّلِبِ، وَأُمُّهُ آمِنَةُ بِنْتُ وَهْبٍ. وُلِدَ الرَّسُولُ يَتِيمًا، فَقَدْ تُوُفِّيَ أَبُوهُ وَهُوَ فِي بَطْنِ أُمِّهِ، ثُمَّ تُوُفِّيَتْ أُمُّهُ وَكَانَ عُمْرُهُ سِتَّ سِنِينَ، فَرَبَّاهُ جَدُّهُ عَبْدُ الْمُطَّلِبِ. وَلَمَّا تُوُفِّيَ جَدُّهُ عَبْدُ الْمُطَّلِبِ، رَبَّاهُ عَمُّهُ أَبُو طَالِبٍ، وَكَانَ عُمْرُهُ ثَمَانِيَ سِنِينَ.
 
-فِي الصِّغَرِ، عَمِلَ مُحَمَّدٌ فِي رِعَايَةِ الْغَنَمِ، ثُمَّ ذَهَبَ إِلَى الشَّامِ مَعَ عَمِّهِ أَبِي طَالِبٍ لِلتِّجَارَةِ، ثُمَّ تَزَوَّجَ خَدِيجَةَ بَعْدَ ذَلِك، وَكَانَ عُمْرُهُ خَمْسًا وَعِشْرِينَ سَنَةً، وَعُمْرُهَا أَرْبَعِينَ سَنَةً.
+فِي الصِّغَرِ، عَمِلَ مُحَمَّدٌ فِي رِعَايَةِ الْغَنَمِ، ثُمَّ ذَهَبَ إِلَى الشَّامِ مَعَ عَمِّهِ أَبِي طَالِبٍ لِلتِّجَارَةِ، ثُمَّ تَزَوَّجَ خَدِيجَةَ بَعْدَ ذَلِكَ، وَكَانَ عُمْرُهُ خَمْسًا وَعِشْرِينَ سَنَةً، وَعُمْرُهَا أَرْبَعِينَ سَنَةً.
 
 وَلَمَّا بَلَغَ عُمْرُهُ أَرْبَعِينَ سَنَةً، بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُولًا، ثُمَّ تُوُفِّيَ عَمُّهُ أَبُو طَالِبٍ وَكَانَ عُمْرُهُ خَمْسِينَ سَنَةً، ثُمَّ تُوُفِّيَتْ مِنْ بَعْدِهِ زَوْجَتُهُ خَدِيجَةُ، وَهِيَ أَوَّلُ مَنْ آمَنَ بِاللَّهِ وَرَسُولِهِ وَأَوَّلُ امْرَأَةٍ صَدَّقَتْ نُبُوَّتَهُ.
 
-وَبَعْدَ ذَلِك خَرَجَ الرَّسُولُ مَعَ أَصْحَابِهِ إِلَى الطَّائِفِ يَدْعُو أَهْلَهَا إِلَى الْإِسْلَامِ فَلَمْ يُسْلِمُوا، ثُمَّ أَسْرَى اللَّهُ بِرَسُولِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى، وَإِلَى السَّمَوَاتِ فِي الْمِعْرَاجِ.
+وَبَعْدَ ذَلِكَ خَرَجَ الرَّسُولُ مَعَ أَصْحَابِهِ إِلَى الطَّائِفِ يَدْعُو أَهْلَهَا إِلَى الْإِسْلَامِ فَلَمْ يُسْلِمُوا، ثُمَّ أَسْرَى اللَّهُ بِرَسُولِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى، وَإِلَى السَّمَوَاتِ فِي الْمِعْرَاجِ.
 
 ثُمَّ هَاجَرَ الرَّسُولُ وَأَصْحَابُهُ مِنْ مَكَّةَ إِلَى الْمَدِينَةِ وَكَانَتْ هِجْرَتُهُ فِي السَّنَةِ الثَّالِثَةِ وَالْخَمْسِينَ مِنْ عُمْرِهِ. وَوَفَاتُهُ فِي الثَّانِي عَشَرَ مِنْ شَهْرِ رَبِيعٍ الأَوَّلِ مِنَ السَّنَةِ الْحَادِيَةِ عَشْرَةَ لِلْهِجْرَةِ، وَكَانَ عُمْرُهُ ثَلَاثًا وَسِتِّينَ سَنَةً.
 
 وَقَالَ الْأُسْتَاذُ: الْحِكَمُ الْمَأْخُوذَةُ مِنْ ذِكْرَى مَوْلِدِ النَّبِيِّ مِنْهَا: تَزِيدُ الْحُبَّ لِلنَّبِيِّ، التَّخَلُّقُ بِأَخْلَاقِ الرَّسُولِ، اِتِّبَاعُ سُنَنِ الرَّسُولِ، نَشْرُ الْخَيْرَاتِ بَيْنَ النَّاسِ.`,
         paragraphs: [
           {
-            arabic: "فِي الْأُسْبُوعِ الْمَاضِي، احْتَفَلَ التَّلَامِيذُ بِذِكْرَى مَوْلِدِ الرَّسُولِ. هُمْ يَسْتَمِعُونَ إِلَى مُحَاضَرَةٍ دِينِيَّةٍ أَلْقَاهَا الْأُسْتَاذُ مُحَمَّدُ إِدْرِيسُ.",
-            translation: "Pada minggu lalu, para siswa merayakan peringatan maulid Nabi. Mereka mendengarkan ceramah agama yang disampaikan oleh Ustadz Muhammad Idris."
+            arabic: "فِي الْأُسْبُوعِ الْمَاضِي، احْتَفَلَ التَّلَامِيذُ بِذِكْرَى مَوْلِدِ الرَّسُولِ. هُمْ يَسْتَمِعُونَ إِلَى مُحَاضَرَةٍ دِينِيَّةٍ أَلْقَاهَا الْأُسْتَاذُ مُحَمَّدُ إِدْرِيسُ. وَتَحَدَّثَ الْأُسْتَاذُ فِي مُحَاضَرَتِهِ عَنْ \"سِيرَةِ النَّبِيِّ مُنْذُ وِلَادَتِهِ إِلَى وَفَاتِهِ\".",
+            translation: "Pada minggu lalu, para siswa merayakan peringatan maulid Nabi. Mereka mendengarkan ceramah agama yang disampaikan oleh Ustadz Muhammad Idris. Ustadz berbicara dalam ceramahnya tentang \"Sirah Nabi sejak kelahirannya hingga wafatnya\"."
           },
           {
-            arabic: "قَدْ وُلِدَ فِي يَوْمِ الاثْنَيْنِ، فِي عَامِ الْفِيلِ، الثَّانِي عَشَرَ مِنْ شَهْرِ رَبِيعِ الأَوَّلِ. اسْمُ أَبِيهِ عَبْدُ اللَّهِ بْنُ عَبْدِ الْمُطَّلِبِ، وَأُمُّهُ آمِنَةُ بِنْتُ وَهْبٍ.",
-            translation: "Nabi dilahirkan pada hari Senin, Tahun Gajah, tanggal 12 bulan Rabi'ul Awwal. Nama ayahnya adalah Abdullah bin Abdul Muttalib, dan ibunya adalah Aminah binti Wahab."
+            arabic: "قَدْ وُلِدَ فِي يَوْمِ الاثْنَيْنِ، فِي عَامِ الْفِيلِ، الثَّانِي عَشَرَ مِنْ شَهْرِ رَبِيعِ الأَوَّلِ. اسْمُ أَبِيهِ عَبْدُ اللَّهِ بْنُ عَبْدِ الْمُطَّلِبِ، وَأُمُّهُ آمِنَةُ بِنْتُ وَهْبٍ. وُلِدَ الرَّسُولُ يَتِيمًا، فَقَدْ تُوُفِّيَ أَبُوهُ وَهُوَ فِي بَطْنِ أُمِّهِ، ثُمَّ تُوُفِّيَتْ أُمُّهُ وَكَانَ عُمْرُهُ سِتَّ سِنِينَ، فَرَبَّاهُ جَدُّهُ عَبْدُ الْمُطَّلِبِ. وَلَمَّا تُوُفِّيَ جَدُّهُ عَبْدُ الْمُطَّلِبِ، رَبَّاهُ عَمُّهُ أَبُو طَالِبٍ، وَكَانَ عُمْرُهُ ثَمَانِيَ سِنِينَ.",
+            translation: "Nabi dilahirkan pada hari Senin, Tahun Gajah, tanggal 12 bulan Rabi'ul Awwal. Nama ayahnya adalah Abdullah bin Abdul Muttalib, dan ibunya adalah Aminah binti Wahab. Rasulullah lahir dalam keadaan yatim, karena ayahnya wafat ketika beliau masih di kandungan ibunya. Kemudian ibunya wafat ketika beliau berumur 6 tahun, lalu beliau diasuh kakeknya Abdul Muttalib. Ketika kakeknya wafat, beliau diasuh pamannya Abu Talib saat berusia 8 tahun."
           },
           {
-            arabic: "وُلِدَ الرَّسُولُ يَتِيمًا، فَقَدْ تُوُفِّيَ أَبُوهُ وَهُوَ فِي بَطْنِ أُمِّهِ، ثُمَّ تُوُفِّيَتْ أُمُّهُ وَكَانَ عُمْرُهُ سِتَّ سِنِينَ، فَرَبَّاهُ جَدُّهُ عَبْدُ الْمُطَّلِبِ. وَلَمَّا تُوُفِّيَ جَدُّهُ عَبْدُ الْمُطَّلِبِ، رَبَّاهُ عَمُّهُ أَبُو طَالِبٍ، وَكَانَ عُمْرُهُ ثَمَانِيَ سِنِينَ.",
-            translation: "Rasulullah lahir dalam keadaan yatim, karena ayahnya wafat ketika beliau masih di kandungan ibunya. Kemudian ibunya wafat ketika beliau berumur 6 tahun, lalu beliau diasuh kakeknya Abdul Muttalib. Ketika kakeknya wafat, beliau diasuh pamannya Abu Talib saat berusia 8 tahun."
-          },
-          {
-            arabic: "فِي الصِّغَرِ، عَمِلَ مُحَمَّدٌ فِي رِعَايَةِ الْغَنَمِ، ثُمَّ ذَهَبَ إِلَى الشَّامِ مَعَ عَمِّهِ أَبِي طَالِبٍ لِلتِّجَارَةِ، ثُمَّ تَزَوَّجَ خَدِيجَةَ بَعْدَ ذَلِك، وَكَانَ عُمْرُهُ خَمْسًا وَعِشْرِينَ سَنَةً، وَعُمْرُهَا أَرْبَعِينَ سَنَةً.",
+            arabic: "فِي الصِّغَرِ، عَمِلَ مُحَمَّدٌ فِي رِعَايَةِ الْغَنَمِ، ثُمَّ ذَهَبَ إِلَى الشَّامِ مَعَ عَمِّهِ أَبِي طَالِبٍ لِلتِّجَارَةِ، ثُمَّ تَزَوَّجَ خَدِيجَةَ بَعْدَ ذَلِكَ، وَكَانَ عُمْرُهُ خَمْسًا وَعِشْرِينَ سَنَةً، وَعُمْرُهَا أَرْبَعِينَ سَنَةً.",
             translation: "Di masa kecil, Muhammad bekerja menggembala kambing, kemudian pergi ke Syam bersama pamannya Abu Talib untuk berdagang. Kemudian beliau menikah dengan Khadijah setelah itu saat berusia 25 tahun dan Khadijah berusia 40 tahun."
           },
           {
-            arabic: "وَلَمَّا بَلَغَ عُمْرُهُ أَرْبَعِينَ سَنَةً، بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُولًا، ثُمَّ تُوُفِّيَ عَمُّهُ أَبُو طَالِبٍ وَكَانَ عُمْرُهُ خَمْسِينَ سَنَةً، ثُمَّ تُوُفِّيَتْ مِنْ بَعْدِهِ زَوْجَتُهُ خَدِيجَةُ، وَهِيَ أَوَّلُ مَنْ آمَنَ بِاللَّهِ وَرَسُولِهِ.",
-            translation: "Ketika usianya mencapai 40 tahun, Allah mengutus Muhammad sebagai Nabi dan Rasul. Kemudian pamannya Abu Talib wafat saat Nabi berumur 50 tahun, lalu tak lama setelah itu istrinya Khadijah wafat; dialah wanita pertama yang beriman kepada Allah dan Rasul-Nya."
+            arabic: "وَلَمَّا بَلَغَ عُمْرُهُ أَرْبَعِينَ سَنَةً، بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُولًا، ثُمَّ تُوُفِّيَ عَمُّهُ أَبُو طَالِبٍ وَكَانَ عُمْرُهُ خَمْسِينَ سَنَةً، ثُمَّ تُوُفِّيَتْ مِنْ بَعْدِهِ زَوْجَتُهُ خَدِيجَةُ، وَهِيَ أَوَّلُ مَنْ آمَنَ بِاللَّهِ وَرَسُولِهِ وَأَوَّلُ امْرَأَةٍ صَدَّقَتْ نُبُوَّتَهُ.",
+            translation: "Ketika usianya mencapai 40 tahun, Allah mengutus Muhammad sebagai Nabi dan Rasul. Kemudian pamannya Abu Talib wafat saat Nabi berumur 50 tahun, lalu tak lama setelah itu istrinya Khadijah wafat; dialah wanita pertama yang beriman kepada Allah dan Rasul-Nya serta wanita pertama yang membenarkan kenabiannya."
           },
           {
-            arabic: "وَبَعْدَ ذَلِك خَرَجَ الرَّسُولُ مَعَ أَصْحَابِهِ إِلَى الطَّائِفِ يَدْعُو أَهْلَهَا إِلَى الْإِسْلَامِ فَلَمْ يُسْلِمُوا، ثُمَّ أَسْرَى اللَّهُ بِرَسُولِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى، وَإِلَى السَّمَوَاتِ فِي الْمِعْرَاجِ.",
+            arabic: "وَبَعْدَ ذَلِكَ خَرَجَ الرَّسُولُ مَعَ أَصْحَابِهِ إِلَى الطَّائِفِ يَدْعُو أَهْلَهَا إِلَى الْإِسْلَامِ فَلَمْ يُسْلِمُوا، ثُمَّ أَسْرَى اللَّهُ بِرَسُولِهِ لَيْلًا مِنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى، وَإِلَى السَّمَوَاتِ فِي الْمِعْرَاجِ.",
             translation: "Setelah itu Rasulullah keluar bersama sahabatnya ke Thaif mengajak penduduknya ke Islam namun mereka belum berislam. Kemudian Allah memperjalankan (Isra') Rasul-Nya di malam hari dari Masjidil Haram ke Masjidil Aqsha, dan diangkat ke langit dalam peristiwa Mi'raj."
           },
           {
             arabic: "ثُمَّ هَاجَرَ الرَّسُولُ وَأَصْحَابُهُ مِنْ مَكَّةَ إِلَى الْمَدِينَةِ وَكَانَتْ هِجْرَتُهُ فِي السَّنَةِ الثَّالِثَةِ وَالْخَمْسِينَ مِنْ عُمْرِهِ. وَوَفَاتُهُ فِي الثَّانِي عَشَرَ مِنْ شَهْرِ رَبِيعٍ الأَوَّلِ مِنَ السَّنَةِ الْحَادِيَةِ عَشْرَةَ لِلْهِجْرَةِ، وَكَانَ عُمْرُهُ ثَلَاثًا وَسِتِّينَ سَنَةً.",
             translation: "Kemudian Rasulullah dan para sahabatnya berhijrah dari Makkah ke Madinah saat usianya 53 tahun. Dan wafatnya beliau pada tanggal 12 Rabi'ul Awwal tahun 11 Hijriah saat berusia 63 tahun."
+          },
+          {
+            arabic: "وَقَالَ الْأُسْتَاذُ: الْحِكَمُ الْمَأْخُوذَةُ مِنْ ذِكْرَى مَوْلِدِ النَّبِيِّ مِنْهَا: تَزِيدُ الْحُبَّ لِلنَّبِيِّ، التَّخَلُّقُ بِأَخْلَاقِ الرَّسُولِ، اِتِّبَاعُ سُنَنِ الرَّسُولِ، نَشْرُ الْخَيْرَاتِ بَيْنَ النَّاسِ.",
+            translation: "Ustadz berkata: Hikmah yang dapat dipetik dari peringatan maulid Nabi di antaranya: menambah rasa cinta kepada Nabi, meneladani akhlak Rasulullah, mengikuti sunnah-sunnah Rasul, dan menyebarkan kebaikan di antara manusia."
           }
         ]
       },
@@ -235,15 +234,15 @@ const arabicData = {
         { speaker: "عُمَرُ", role: "Siswa A", avatarIcon: "fa-user-graduate", arabic: "كَمْ كَانَ عُمْرُهُ عِنْدَمَا نَزَلَ عَلَيْهِ الْوَحْيُ؟", translation: "Berapa usia beliau ketika wahyu turun kepada beliau?" },
         { speaker: "عَلِيٌّ", role: "Siswa B", avatarIcon: "fa-user-ninja", arabic: "كَانَ عُمْرُهُ أَرْبَعِيْنَ سَنَةً.", translation: "Usia beliau saat itu adalah 40 tahun." },
         { speaker: "عُمَرُ", role: "Siswa A", avatarIcon: "fa-user-graduate", arabic: "مَنْ هِيَ أَوَّلُ امْرَأَةٍ آمَنَتْ بِالرَّسُوْلِ؟", translation: "Siapakah wanita pertama yang beriman kepada Rasulullah?" },
-        { speaker: "عَلِيٌّ", role: "Siswa B", avatarIcon: "fa-user-ninja", arabic: "هِيَ زَوْجَتُهُ خَدِيْجَةُ رَضِيَ اللَّهُ عَنْهَا.", translation: "Dialah istrinya Khadijah radhiyallahu 'anha." },
+        { speaker: "عَلِيٌّ", role: "Siswa B", avatarIcon: "fa-user-ninja", arabic: "هِيَ زَوْجَتُهُ خَدِيْجَةُ رَضِيَ اللَّهُ عَنْهَا، وَأَوَّلُ امْرَأَةٍ صَدَّقَتْ نُبُوَّتَهُ.", translation: "Dialah istrinya Khadijah radhiyallahu 'anha, dan wanita pertama yang membenarkan kenabiannya." },
         { speaker: "عُمَرُ", role: "Siswa A", avatarIcon: "fa-user-graduate", arabic: "كَمْ كَانَ عُمْرُ النَّبِيِّ عِنْدَ الْهِجْرَةِ؟", translation: "Berapakah usia Nabi ketika beliau berhijrah?" },
         { speaker: "عَلِيٌّ", role: "Siswa B", avatarIcon: "fa-user-ninja", arabic: "كَانَتْ هِجْرَتُهُ فِي السَّنَةِ الثَّالِثَةِ وَالْخَمْسِينَ مِنْ عُمْرِهِ.", translation: "Hijrah beliau terjadi pada usia 53 tahun." },
-        { speaker: "عُمَرُ", role: "Siswa A", avatarIcon: "fa-user-graduate", arabic: "وَمَا هِيَ الْحِكْمَةُ مِنْ ذِكْرَى مَوْلِدِ النَّبِيِّ؟", translation: "Dan apa hikmah dari peringatan maulid Nabi?" },
-        { speaker: "عَلِيٌّ", role: "Siswa B", avatarIcon: "fa-user-ninja", arabic: "تَزِيْدُ الْحُبَّ لِلنَّبِيِّ، وَالتَّخَلُّقُ بِأَخْلَاقِهِ، وَاتِّبَاعُ سُنَنِهِ.", translation: "Menambah rasa cinta kepada Nabi, meneladani akhlaknya, dan mengikuti sunnahnya." }
+        { speaker: "عُمَرُ", role: "Siswa A", avatarIcon: "fa-user-graduate", arabic: "وَمَا هِيَ الْحِكَمُ الْمَأْخُوذَةُ مِنْ ذِكْرَى مَوْلِدِ النَّبِيِّ؟", translation: "Dan apakah hikmah yang dipetik dari peringatan maulid Nabi?" },
+        { speaker: "عَلِيٌّ", role: "Siswa B", avatarIcon: "fa-user-ninja", arabic: "تَزِيْدُ الْحُبَّ لِلنَّبِيِّ، وَالتَّخَلُّقُ بِأَخْلَاقِهِ، وَاتِّبَاعُ سُنَنِهِ، وَنَشْرُ الْخَيْرَاتِ.", translation: "Menambah rasa cinta kepada Nabi, meneladani akhlaknya, mengikuti sunnahnya, dan menyebarkan kebaikan." }
       ],
       qawaid: {
         title: "الأَعْدَادُ وَالأَعْمَارُ فِي السِّيْرَةِ (Bilangan & Usia dalam Sirah)",
-        explanation: "Dalam Sirah Nabi, kita mempelajari pengucapan angka dan usia (الأَعْدَادُ). Contoh: 6 tahun (سِتَّ سِنِينَ), 25 tahun (خَمْسًا وَعِشْرِينَ سَنَةً), 40 tahun (أَرْبَعِينَ سَنَةً), 63 tahun (ثَلَاثًا وَسِتِّينَ سَنَةً).",
+        explanation: "Dalam Sirah Nabi, kita mempelajari pengucapan angka dan usia (الأَعْدَادُ). Contoh: 6 tahun (سِتَّ سِنِينَ), 8 tahun (ثَمَانِيَ سِنِينَ), 25 tahun (خَمْسًا وَعِشْرِينَ سَنَةً), 40 tahun (أَرْبَعِينَ سَنَةً), 50 tahun (خَمْسِينَ سَنَةً), 53 tahun (الثَّالِثَةِ وَالْخَمْسِينَ), 63 tahun (ثَلَاثًا وَسِتِّينَ سَنَةً).",
         examples: [
           { pattern: "Usia 25", sample: "كَانَ عُمْرُهُ خَمْسًا وَعِشْرِينَ سَنَةً", meaning: "Usianya adalah 25 tahun" },
           { pattern: "Usia 63", sample: "تُوُفِّيَ وَعُمْرُهُ ثَلَاثٌ وَسِتُّونَ سَنَةً", meaning: "Beliau wafat pada usia 63 tahun" }
@@ -318,7 +317,6 @@ const arabicData = {
           }
         ]
       },
-      // 20 Mufrodat Bab 3 yang diambil LANGSUNG dari teks Qira'ah Bab 3
       mufrodat: [
         { arabic: "غَارُ حِرَاءٍ", latin: "Gharu Hira'", indo: "Gua Hira", category: "الْقِرَاءَةُ - Tempat", icon: "fa-mountain" },
         { arabic: "يَخْلُو بِنَفْسِهِ", latin: "Yakhlu bi nafsihi", indo: "Menyendiri / Berhalwat", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-user-clock" },
@@ -563,7 +561,7 @@ const arabicData = {
       audioText: "وَلَمَّا بَلَغَ عُمْرُهُ أَرْبَعِينَ سَنَةً بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُولًا",
       question: "مَا هُوَ الْحَدَثُ الْعَظِيْمُ الَّذِي حَدَثَ عِنْدَمَا بَلَغَ عُمْرُ النَّبِيِّ 40 سَنَةً؟",
       options: ["سَافَرَ إِلَى الشَّامِ لِلتِّجَارَةِ", "بَعَثَهُ اللَّهُ نَبِيًّا وَرَسُوْلًا", "هَاجَرَ إِلَى الْمَدِيْنَةِ", "تُوُفِّيَ جَدُّهُ عَبْدُ الْمُطَّلِبِ"],
-      correct: 1, explanation: "فِي عُمْرِ 40 سَنَةً بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُوْلًا."
+      correct: 1, explanation: "فِي عُمْرِ 40 سَنَةً بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُوْلًا."
     },
     {
       id: 26, chapterId: 2, typeTag: "تَحْلِيْلُ عَامِ الْحُزْنِ (HOTS)",
@@ -597,7 +595,7 @@ const arabicData = {
       id: 30, chapterId: 2, typeTag: "تَحْلِيْلُ الأخْلَاقِ النَّبَوِيَّةِ",
       audioText: "الْحِكَمُ الْمَأْخُوذَةُ مِنْ ذِكْرَى مَوْلِدِ النَّبِيِّ: التَّخَلُّقُ بِأَخْلَاقِ الرَّسُولِ وَاتِّبَاعُ سُنَنِهِ",
       question: "مَا هُوَ الدَّلِيْلُ الْحَقِيْقِيُّ عَلَى حُبِّ النَّبِيِّ فِي حَيَاتِنَا الْيَوْمِيَّةِ؟",
-      options: ["التَّخَلُّقُ بِأَخْلَاقِ الرَّسُوْلِ وَاتِّبَاعُ سُنَنِهِ وَنَشْرُ الْخَيْرِ بَيْنَ النَّاسِ", "الاِحْتِفَالُ بِدُوْنِ تَغْيِيْرِ السُّلُوْكِ", "حِفْظُ الأَسْمَاءِ فَقَطْ", "قِرَاءَةُ الْكُتُبِ بِدُوْنِ الْعَمَلِ بِهَا"],
+      options: ["التَّخَلُّقُ بِأَخْلَاقِ الرَّسُوْلِ وَاتِّبَاعُ سُنَنِهِ وَنَشْرُ الْخَيْرِ بَيْنَ النَّاسِ", "الاِحْتِفَالُ بِدُوْنِ تَغْيِيْرِ السُّلُوْكِ", "حِفْظُ الأَسْمَاءِ فَقَطْ", "قِرَاءَةُ الْكُتُبِ بِدُوْنِ الْعَمَلِ بِهَا"],
       correct: 0, explanation: "الْحِكْمَةُ الْحَقِيْقِيَّةُ هِيَ التَّخَلُّقُ بِأَخْلَاقِهِ وَاتِّبَاعُ سُنَنِهِ."
     },
     {
@@ -912,8 +910,8 @@ const arabicData = {
     {
       id: 16, chapterId: 2, skill: "مَهَارَةُ الْقِرَاءَةِ",
       question: "مَنْ رَبَّى النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بَعْدَ وَفَاةِ أُمِّهِ آَمِنَةَ؟",
-      options: ["عَمُّهُ أَبُو طَالِبٍ", "جَدُّهُ عَبْدُ الْمُطَّلِبِ", "حَلِيْمَةُ السَّعْدِيَّةُ", "أَبُو بَكْرٍ الصِّدِّيْقُ"],
-      correct: 1, explanation: "رَبَّاهُ 'جَدُّهُ عَبْدُ الْمُطَّلِبِ' عِنْدَمَا كَانَ عُمْرُهُ سِتَّ سِنِيْنَ."
+      options: ["عَمُّهُ أَبُو طَالِبٍ", "جَدُّهُ عَبْدُ الْمُطَّلِبِ", "حَلِيْمَةُ السَّعْدِيَّةُ", "أَبُو بَكْرٍ الصِّدِّيْقُ"],
+      correct: 1, explanation: "رَبَّاهُ 'جَدُّهُ عَبْدُ الْمُطَّلِبِ' عِنْدَمَا كَانَ عُمْرُهُ سِتَّ سِنِيْنَ."
     },
     {
       id: 17, chapterId: 2, skill: "مَهَارَةُ الإِسْتِمَاعِ",
@@ -935,9 +933,9 @@ const arabicData = {
     },
     {
       id: 20, chapterId: 2, skill: "مَهَارَةُ الْكَلَامِ",
-      question: "مَا هِيَ الْحِكْمَةُ المَأْخُوذَةُ مِنْ ذِكْرَى مَوْلِدِ النَّبِيِّ كَمَا فِي النَّصِّ؟",
-      options: ["جَمْعُ الأَمْوَالِ", "تَزِيْدُ الْحُبَّ لِلنَّبِيِّ وَاتِّبَاعُ سُنَنِهِ وَالتَّخَلُّقُ بِأَخْلَاقِهِ", "اللَّعِبُ مَعَ الأَصْدِقَاءِ", "السَّفَرُ لِلْعُطْلَةِ"],
-      correct: 1, explanation: "الْحِكْمَةُ هِيَ: 'تَزِيْدُ الْحُبَّ لِلنَّبِيِّ وَالتَّخَلُّقُ بِأَخْلَاقِ الرَّسُولِ'."
+      question: "مَا هِيَ الْحِكَمُ الْمَأْخُوذَةُ مِنْ ذِكْرَى مَوْلِدِ النَّبِيِّ كَمَا فِي النَّصِّ؟",
+      options: ["جَمْعُ الأَمْوَالِ", "تَزِيْدُ الْحُبَّ لِلنَّبِيِّ وَاتِّبَاعُ سُنَنِهِ وَالتَّخَلُّقُ بِأَخْلَاقِهِ وَنَشْرُ الْخَيْرَاتِ", "اللَّعِبُ مَعَ الأَصْدِقَاءِ", "السَّفَرُ لِلْعُطْلَةِ"],
+      correct: 1, explanation: "الْحِكْمَةُ هِيَ: 'تَزِيْدُ الْحُبَّ لِلنَّبِيِّ، التَّخَلُّقُ بِأَخْلَاقِ الرَّسُولِ، اِتِّبَاعُ سُنَنِ الرَّسُولِ، نَشْرُ الْخَيْرَاتِ'."
     },
 
     // --- BAB 3 QUESTIONS (21-30) ---
@@ -999,7 +997,7 @@ const arabicData = {
       id: 30, chapterId: 3, skill: "مَهَارَةُ الْقِرَاءَةِ",
       question: "مَا هِيَ الْحِكْمَةُ الرَّئِيْسِيَّةُ مِنْ عِبَادَةِ الأُضْحِيَّةِ كَمَا فِي النَّصِّ؟",
       options: ["التَّفَاخُرُ بِالأَمْوَالِ", "الإِخْلَاصُ فِي الْعِبَادَةِ وَالتَّعَاوُنُ وَالتَّقَاسُمُ بَيْنَ النَّاسِ", "طَلَبُ الثَّنَاءِ مِنَ النَّاسِ", "جَمْعُ اللُّحُوْمِ فِي الْبَيْتِ"],
-      correct: 1, explanation: "تُعَلِّمُنَا الأُضْحِيَّةُ: 'الْإِخْلَاصَ فِي الْعِبَادَةِ وَالتَّعَاوُنَ وَالتَّقَاسُمَ'."
+      correct: 1, explanation: "تُعَلِّمُنَا الأُضْحِيَّةُ: 'الْإِخْلَاصَ فِي الْعِبَادَةِ وَالتَّعَاوُنَ وَالتَّقَاسُمَ'."
     }
   ]
 };

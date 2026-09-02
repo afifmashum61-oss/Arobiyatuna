@@ -1,7 +1,7 @@
 /**
  * Data Store untuk Aplikasi Web Media Pembelajaran Bahasa Arab Interaktif
  * 3 Bab Utama dengan:
- * - 20 Mufrodat per Bab (60 Mufrodat Total)
+ * - 20 Mufrodat per Bab yang diambil LANGSUNG dari teks Maharah Qira'ah setiap Bab (Total 60 Mufrodat)
  * - 20 Dialog Hiwar per Bab dengan Ikon Orang / Avatar Interaktif
  * - 20 Soal Istima' Berpikir Kritis per Bab (60 Soal Istima' Total) dalam Bahasa Arab
  * - Qawa'id Bab 1: Tabel Tashrif Lughawi 14 Dhomir Fi'il Madhi "اِحْتَفَلَ" (احتفل)
@@ -57,27 +57,28 @@ const arabicData = {
           }
         ]
       },
+      // 20 Mufrodat Bab 1 yang diambil LANGSUNG dari teks Qira'ah Bab 1
       mufrodat: [
-        { arabic: "سَنَةٌ هِجْرِيَّةٌ", latin: "Sanatun Hijriyyah", indo: "Tahun Hijriah", category: "Waktu", icon: "fa-calendar" },
-        { arabic: "شَهْرُ مُحَرَّمٍ", latin: "Syahru Muharram", indo: "Bulan Muharram", category: "Waktu", icon: "fa-moon" },
-        { arabic: "مَلْعَبُ الْمَدْرَسَةِ", latin: "Mal'abul Madrasah", indo: "Lapangan Sekolah", category: "Tempat", icon: "fa-school" },
-        { arabic: "مُحَاضَرَةٌ دِيْنِيَّةٌ", latin: "Muhadharah Diniyyah", indo: "Ceramah Agama", category: "Kegiatan", icon: "fa-bullhorn" },
-        { arabic: "هَاجَرَ - يُهَاجِرُ", latin: "Hajara - Yuhajiru", indo: "Berhijrah / Pindah", category: "Kata Kerja", icon: "fa-walking" },
-        { arabic: "الْكُفَّارُ", latin: "Al-Kuffar", indo: "Orang-orang kafir", category: "Orang", icon: "fa-users" },
-        { arabic: "تَقْوِيْمٌ", latin: "Taqwim", indo: "Kalender / Penanggalan", category: "Benda", icon: "fa-calendar-alt" },
-        { arabic: "تَطْبِيْقٌ", latin: "Tathbiq", indo: "Penerapan / Aplikasi", category: "Konsep", icon: "fa-cogs" },
-        { arabic: "وَسَائِلُ التَّوَاصُلِ", latin: "Wasailut Tawashul", indo: "Media Sosial / Komunikasi", category: "Teknologi", icon: "fa-share-alt" },
-        { arabic: "التَّصْوِيْرُ الذَّاتِيُّ", latin: "At-Taswir adz-Dzati", indo: "Swafoto (Selfie)", category: "Teknologi", icon: "fa-camera" },
-        { arabic: "الْيَمِيْنُ", latin: "Al-Yamin", indo: "Sebelah Kanan", category: "Arah", icon: "fa-arrow-right" },
-        { arabic: "الْيَسَارُ", latin: "Al-Yasar", indo: "Sebelah Kiri", category: "Arah", icon: "fa-arrow-left" },
-        { arabic: "وَطَنٌ", latin: "Wathan", indo: "Tanah Air / Negeri", category: "Tempat", icon: "fa-flag" },
-        { arabic: "أَمْوَالٌ", latin: "Amwal", indo: "Harta Benda", category: "Benda", icon: "fa-coins" },
-        { arabic: "تِجَارَةٌ", latin: "Tijarah", indo: "Perdagangan / Bisnis", category: "Pekerjaan", icon: "fa-store" },
-        { arabic: "سَالِمِيْنَ", latin: "Salimin", indo: "Selamat / Sejahtera", category: "Sifat", icon: "fa-shield-alt" },
-        { arabic: "التِّكْنُولُوجِيَا", latin: "At-Teknologiyya", indo: "Teknologi Digital", category: "Teknologi", icon: "fa-mobile-alt" },
-        { arabic: "الدَّعْوَةُ", latin: "Ad-Da'wah", indo: "Dakwah / Syiar Islam", category: "Ibadah", icon: "fa-bullhorn" },
-        { arabic: "التَّعَلُّمُ", latin: "At-Ta'allum", indo: "Belajar / Menuntut Ilmu", category: "Pendidikan", icon: "fa-book-reader" },
-        { arabic: "الأَنْشِطَةُ النَّافِعَةُ", latin: "Al-Ansyiathah an-Nafi'ah", indo: "Kegiatan Bermanfaat", category: "Konsep", icon: "fa-thumbs-up" }
+        { arabic: "شَهْرُ مُحَرَّمٍ", latin: "Syahru Muharram", indo: "Bulan Muharram (Awal Tahun)", category: "الْقِرَاءَةُ - Waktu", icon: "fa-moon" },
+        { arabic: "يَحْتَفِلُوْنَ", latin: "Yahkafiluna", indo: "Mereka merayakan", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-glass-cheers" },
+        { arabic: "سَنَةٌ هِجْرِيَّةٌ جَدِيْدَةٌ", latin: "Sanatun Hijriyyatun Jadidah", indo: "Tahun Baru Hijriah", category: "الْقِرَاءَةُ - Waktu", icon: "fa-calendar-alt" },
+        { arabic: "مَلْعَبُ الْمَدْرَسَةِ", latin: "Mal'abul Madrasah", indo: "Lapangan Sekolah", category: "الْقِرَاءَةُ - Tempat", icon: "fa-school" },
+        { arabic: "جُزْءُ الْيَمِيْنِ", latin: "Juz'ul Yamin", indo: "Sebelah Kanan", category: "الْقِرَاءَةُ - Arah", icon: "fa-arrow-right" },
+        { arabic: "جُزْءُ الْيَسَارِ", latin: "Juz'ul Yasar", indo: "Sebelah Kiri", category: "الْقِرَاءَةُ - Arah", icon: "fa-arrow-left" },
+        { arabic: "مُحَاضَرَةٌ دِيْنِيَّةٌ", latin: "Muhadharatun Diniyyah", indo: "Ceramah Agama", category: "الْقِرَاءَةُ - Kegiatan", icon: "fa-bullhorn" },
+        { arabic: "هَاجَرَ - يُهَاجِرُ", latin: "Hajara - Yuhajiru", indo: "Berhijrah / Pindah", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-walking" },
+        { arabic: "أَصْحَابٌ", latin: "Ash-hab", indo: "Sahabat-sahabat Nabi", category: "الْقِرَاءَةُ - Orang", icon: "fa-users" },
+        { arabic: "تَرَكُوا", latin: "Taraku", indo: "Mereka telah meninggalkan", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-door-open" },
+        { arabic: "وَطَنٌ", latin: "Wathan", indo: "Tanah Air / Negeri", category: "الْقِرَاءَةُ - Tempat", icon: "fa-flag" },
+        { arabic: "أَمْوَالٌ", latin: "Amwal", indo: "Harta Benda", category: "الْقِرَاءَةُ - Benda", icon: "fa-coins" },
+        { arabic: "تِجَارَةٌ", latin: "Tijarah", indo: "Perdagangan / Bisnis", category: "الْقِرَاءَةُ - Pekerjaan", icon: "fa-store" },
+        { arabic: "حَاوَلَ الْكُفَّارُ", latin: "Hawalal Kuffar", indo: "Orang Kafir Berusaha", category: "الْقِرَاءَةُ - Peristiwa", icon: "fa-user-shield" },
+        { arabic: "حَفِظَ - يَحْفَظُ", latin: "Hafizha - Yahfazhu", indo: "Menjaga / Memelihara", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-shield-alt" },
+        { arabic: "سَالِمِيْنَ", latin: "Salimin", indo: "Dalam Keadaan Selamat", category: "الْقِرَاءَةُ - Sifat", icon: "fa-check-circle" },
+        { arabic: "حَادِثَةٌ عَظِيْمَةٌ", latin: "Haditsatun 'Azhimah", indo: "Peristiwa Besar", category: "الْقِرَاءَةُ - Konsep", icon: "fa-star" },
+        { arabic: "تَقْوِيْمٌ هِجْرِيٌّ", latin: "Taqwimun Hijriyyun", indo: "Kalender Hijriah", category: "الْقِرَاءَةُ - Benda", icon: "fa-calendar" },
+        { arabic: "تَطْبِيْقٌ", latin: "Tathbiq", indo: "Penerapan / Aplikasi", category: "الْقِرَاءَةُ - Konsep", icon: "fa-cogs" },
+        { arabic: "وَسَائِلُ التَّوَاصُلِ", latin: "Wasailut Tawashul", indo: "Media Sosial / Komunikasi", category: "الْقِرَاءَةُ - Teknologi", icon: "fa-mobile-alt" }
       ],
       hiwar: [
         { speaker: "أَحْمَدُ", role: "Siswa A", avatarIcon: "fa-user-graduate", arabic: "السَّلَامُ عَلَيْكُمْ يَا حَسَنُ، مَاذَا يَفْعَلُ التَّلَامِيْذُ فِي مَلْعَبِ الْمَدْرَسَةِ؟", translation: "Assalamu'alaikum wahai Hasan, apa yang sedang dilakukan para siswa di lapangan sekolah?" },
@@ -195,27 +196,28 @@ const arabicData = {
           }
         ]
       },
+      // 20 Mufrodat Bab 2 yang diambil LANGSUNG dari teks Qira'ah Bab 2
       mufrodat: [
-        { arabic: "مَوْلِدُ الرَّسُولِ", latin: "Maulidur Rasul", indo: "Kelahiran Nabi", category: "Peristiwa", icon: "fa-baby" },
-        { arabic: "عَامُ الْفِيلِ", latin: "'Amul Fil", indo: "Tahun Gajah", category: "Waktu", icon: "fa-calendar-times" },
-        { arabic: "يَتِيْمٌ", latin: "Yatim", indo: "Yatim (Ayah Wafat)", category: "Status", icon: "fa-child" },
-        { arabic: "رِعَايَةُ الْغَنَمِ", latin: "Ri'ayatul Ghanam", indo: "Menggembala Kambing", category: "Pekerjaan", icon: "fa-horse" },
-        { arabic: "التِّجَارَةُ", latin: "At-Tijarah", indo: "Perdagangan", category: "Pekerjaan", icon: "fa-shopping-bag" },
-        { arabic: "بَعَثَ - يَبْعَثُ", latin: "Ba'atsa - Yab'atsu", indo: "Mengutus", category: "Kata Kerja", icon: "fa-paper-plane" },
-        { arabic: "الإِسْرَاءُ وَالْمِعْرَاجُ", latin: "Al-Isra' wal Mi'raj", indo: "Perjalanan Isra' & Mi'raj", category: "Peristiwa", icon: "fa-star" },
-        { arabic: "وَفَاةٌ", latin: "Wafat", indo: "Meninggal dunia", category: "Peristiwa", icon: "fa-heart-broken" },
-        { arabic: "الثَّانِي عَشَرَ", latin: "As-Tsani 'Asyar", indo: "Tanggal 12", category: "Angka", icon: "fa-sort-numeric-up" },
-        { arabic: "رَبِيعُ الأَوَّلِ", latin: "Rabi'ul Awwal", indo: "Bulan Rabi'ul Awwal", category: "Waktu", icon: "fa-moon" },
-        { arabic: "شَهْرٌ", latin: "Syahr", indo: "Bulan (Penanggalan)", category: "Waktu", icon: "fa-calendar-alt" },
-        { arabic: "عُمْرٌ", latin: "'Umr", indo: "Usia / Umur", category: "Waktu", icon: "fa-hourglass-half" },
-        { arabic: "سِنِيْنَ", latin: "Sinin", indo: "Tahun-tahun", category: "Waktu", icon: "fa-history" },
-        { arabic: "جَدٌّ", latin: "Jadd", indo: "Kakek", category: "Keluarga", icon: "fa-user-clock" },
-        { arabic: "عَمٌّ", latin: "'Amm", indo: "Paman (dari Ayah)", category: "Keluarga", icon: "fa-user-friends" },
-        { arabic: "زَوْجَةٌ", latin: "Zaujah", indo: "Istri", category: "Keluarga", icon: "fa-female" },
-        { arabic: "أُمِّيٌّ", latin: "Ummiyy", indo: "Tidak Membaca & Menulis", category: "Status", icon: "fa-book" },
-        { arabic: "السَّمَوَاتُ", latin: "As-Samawat", indo: "Langit-langit", category: "Alam", icon: "fa-cloud-sun" },
-        { arabic: "السُّنَنُ", latin: "As-Sunan", indo: "Sunnah-sunnah Nabi", category: "Agama", icon: "fa-scroll" },
-        { arabic: "الأَخْلَاقُ", latin: "Al-Akhlaq", indo: "Akhlak Mulia", category: "Akhlak", icon: "fa-heart" }
+        { arabic: "مَوْلِدُ الرَّسُولِ", latin: "Maulidur Rasul", indo: "Kelahiran Nabi", category: "الْقِرَاءَةُ - Peristiwa", icon: "fa-baby" },
+        { arabic: "سِيْرَةُ النَّبِيِّ", latin: "Siratun Nabiyy", indo: "Sejarah / Biografi Nabi", category: "الْقِرَاءَةُ - Konsep", icon: "fa-history" },
+        { arabic: "وِلَادَةٌ", latin: "Wiladah", indo: "Kelahiran", category: "الْقِرَاءَةُ - Peristiwa", icon: "fa-birthday-cake" },
+        { arabic: "وَفَاةٌ", latin: "Wafah", indo: "Wafat / Meninggal dunia", category: "الْقِرَاءَةُ - Peristiwa", icon: "fa-heart-broken" },
+        { arabic: "عَامُ الْفِيلِ", latin: "'Amul Fil", indo: "Tahun Gajah", category: "الْقِرَاءَةُ - Waktu", icon: "fa-calendar-times" },
+        { arabic: "رَبِيعُ الأَوَّلِ", latin: "Rabi'ul Awwal", indo: "Bulan Rabi'ul Awwal", category: "الْقِرَاءَةُ - Waktu", icon: "fa-moon" },
+        { arabic: "يَتِيمٌ", latin: "Yatim", indo: "Yatim (Ayah Wafat)", category: "الْقِرَاءَةُ - Status", icon: "fa-child" },
+        { arabic: "بَطْنُ أُمِّهِ", latin: "Batnu Ummihi", indo: "Kandungan Ibunya", category: "الْقِرَاءَةُ - Tubuh", icon: "fa-heart" },
+        { arabic: "جَدٌّ (عَبْدُ الْمُطَّلِبِ)", latin: "Jaddun ('Abdul Muttalib)", indo: "Kakek (Abdul Muttalib)", category: "الْقِرَاءَةُ - Keluarga", icon: "fa-user-clock" },
+        { arabic: "عَمٌّ (أَبُو طَالِبٍ)", latin: "'Ammun (Abu Talib)", indo: "Paman (Abu Talib)", category: "الْقِرَاءَةُ - Keluarga", icon: "fa-user-friends" },
+        { arabic: "رِعَايَةُ الْغَنَمِ", latin: "Ri'ayatul Ghanam", indo: "Menggembala Kambing", category: "الْقِرَاءَةُ - Pekerjaan", icon: "fa-horse" },
+        { arabic: "تِجَارَةٌ إِلَى الشَّامِ", latin: "Tijaratun ilasy Syam", indo: "Berdagang ke Negeri Syam", category: "الْقِرَاءَةُ - Pekerjaan", icon: "fa-shopping-bag" },
+        { arabic: "زَوْجَةٌ (خَدِيجَةُ)", latin: "Zaujatun (Khadijah)", indo: "Istri (Khadijah RA)", category: "الْقِرَاءَةُ - Keluarga", icon: "fa-female" },
+        { arabic: "بَعَثَ - يَبْعَثُ", latin: "Ba'atsa - Yab'atsu", indo: "Mengutus sebagai Nabi", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-paper-plane" },
+        { arabic: "أَوَّلُ امْرَأَةٍ", latin: "Awwalu Imra'atin", indo: "Wanita Pertama Beriman", category: "الْقِرَاءَةُ - Orang", icon: "fa-star" },
+        { arabic: "الإِسْرَاءُ وَالْمِعْرَاجُ", latin: "Al-Isra' wal Mi'raj", indo: "Perjalanan Isra' & Mi'raj", category: "الْقِرَاءَةُ - Peristiwa", icon: "fa-cloud-moon" },
+        { arabic: "الْمَسْجِدُ الأَقْصَى", latin: "Al-Masjidul Aqsha", indo: "Masjidil Aqsha", category: "الْقِرَاءَةُ - Tempat", icon: "fa-mosque" },
+        { arabic: "السَّمَوَاتُ", latin: "As-Samawat", indo: "Langit-langit", category: "الْقِرَاءَةُ - Alam", icon: "fa-cloud-sun" },
+        { arabic: "التَّخَلُّقُ بِأَخْلَاقِهِ", latin: "At-Takhalluqu bi Akhlaqihi", indo: "Berakhlak dengan Akhlak Nabi", category: "الْقِرَاءَةُ - Akhlak", icon: "fa-gem" },
+        { arabic: "اتِّبَاعُ سُنَنِهِ", latin: "Ittiba'u Sunanihi", indo: "Mengikuti Sunnah-sunnah Nabi", category: "الْقِرَاءَةُ - Agama", icon: "fa-scroll" }
       ],
       hiwar: [
         { speaker: "عُمَرُ", role: "Siswa A", avatarIcon: "fa-user-graduate", arabic: "مَتَى وُلِدَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَا عَلِيُّ؟", translation: "Kapan Nabi Muhammad ﷺ dilahirkan wahai Ali?" },
@@ -316,27 +318,28 @@ const arabicData = {
           }
         ]
       },
+      // 20 Mufrodat Bab 3 yang diambil LANGSUNG dari teks Qira'ah Bab 3
       mufrodat: [
-        { arabic: "غَارُ حِرَاءٍ", latin: "Gharu Hira'", indo: "Gua Hira", category: "Tempat", icon: "fa-mountain" },
-        { arabic: "الْوَحْيُ", latin: "Al-Wahyu", indo: "Wahyu Allah", category: "Agama", icon: "fa-scroll" },
-        { arabic: "عِيدُ الْفِطْرِ", latin: "'Idul Fitri", indo: "Hari Raya Idul Fitri", category: "Hari Raya", icon: "fa-star-and-crescent" },
-        { arabic: "عِيدُ الْأَضْحَى", latin: "'Idul Adha", indo: "Hari Raya Idul Adha", category: "Hari Raya", icon: "fa-drumstick-bite" },
-        { arabic: "الأُضْحِيَّةُ", latin: "Al-Udh-hiyyah", indo: "Hewan Kurban", category: "Ibadah", icon: "fa-leaf" },
-        { arabic: "صِلَةُ الرَّحِمِ", latin: "Silaturrahim", indo: "Menyambung Silaturahmi", category: "Akhlak", icon: "fa-hands-helping" },
-        { arabic: "اقْرَأْ", latin: "Iqra'", indo: "Bacalah! (Fi'il Amr)", category: "Perintah", icon: "fa-book-open" },
-        { arabic: "الْقَلَمُ", latin: "Al-Qalam", indo: "Pena / Alat Tulis", category: "Benda", icon: "fa-pen" },
-        { arabic: "شَهْرُ رَمَضَانَ", latin: "Syahru Ramadhan", indo: "Bulan Ramadhan", category: "Waktu", icon: "fa-moon" },
-        { arabic: "شَهْرُ شَوَّالٍ", latin: "Syahru Syawwal", indo: "Bulan Syawwal", category: "Waktu", icon: "fa-calendar" },
-        { arabic: "ذُو الْحِجَّةِ", latin: "Dzulhijjah", indo: "Bulan Dzulhijjah", category: "Waktu", icon: "fa-kaaba" },
-        { arabic: "الْمَسَاجِدُ", latin: "Al-Masajid", indo: "Masjid-masjid", category: "Tempat", icon: "fa-mosque" },
-        { arabic: "الْمَيَادِيْنُ", latin: "Al-Mayadin", indo: "Lapangan-lapangan", category: "Tempat", icon: "fa-map-marked-alt" },
-        { arabic: "الْأَقَارِبُ", latin: "Al-Aqarib", indo: "Kerabat / Sanak Saudara", category: "Orang", icon: "fa-users" },
-        { arabic: "الْجِيْرَانُ", latin: "Al-Jiran", indo: "Tetangga-tetangga", category: "Orang", icon: "fa-home" },
-        { arabic: "الْفُقَرَاءُ", latin: "Al-Fuqara'", indo: "Fakir Miskin", category: "Orang", icon: "fa-hand-holding-heart" },
-        { arabic: "التَّعَاوُنُ", latin: "At-Ta'awun", indo: "Tolong-menolong", category: "Akhlak", icon: "fa-hands" },
-        { arabic: "التَّقَاسُمُ", latin: "At-Taqasum", indo: "Saling Berbagi", category: "Akhlak", icon: "fa-share" },
-        { arabic: "التَّقْوَى", latin: "At-Taqwa", indo: "Ketakwaan kepada Allah", category: "Ibadah", icon: "fa-heart-circle-check" },
-        { arabic: "الْإِخْلَاصُ", latin: "Al-Ikhlas", indo: "Keikhlasan dalam Ibadah", category: "Akhlak", icon: "fa-gem" }
+        { arabic: "غَارُ حِرَاءٍ", latin: "Gharu Hira'", indo: "Gua Hira", category: "الْقِرَاءَةُ - Tempat", icon: "fa-mountain" },
+        { arabic: "يَخْلُو بِنَفْسِهِ", latin: "Yakhlu bi nafsihi", indo: "Menyendiri / Berhalwat", category: "الْقِرَاءَةُ - Kata Kerja", icon: "fa-user-clock" },
+        { arabic: "يَتَعَبَّدُ", latin: "Yata'abbadu", indo: "Beribadah kepada Allah", category: "الْقِرَاءَةُ - Ibadah", icon: "fa-hands" },
+        { arabic: "جِبْرِيلُ بِالْوَحْيِ", latin: "Jibrilu bil Wahyi", indo: "Jibril membawa Wahyu", category: "الْقِرَاءَةُ - Agama", icon: "fa-scroll" },
+        { arabic: "شَهْرُ رَمَضَانَ", latin: "Syahru Ramadhan", indo: "Bulan Ramadhan", category: "الْقِرَاءَةُ - Waktu", icon: "fa-moon" },
+        { arabic: "اقْرَأْ", latin: "Iqra'", indo: "Bacalah! (Perintah Pertama)", category: "الْقِرَاءَةُ - Perintah", icon: "fa-book-open" },
+        { arabic: "عَلَقٌ", latin: "'Alaq", indo: "Segumpal Darah", category: "الْقِرَاءَةُ - Manusia", icon: "fa-heartbeat" },
+        { arabic: "الْقَلَمُ", latin: "Al-Qalam", indo: "Pena / Alat Tulis", category: "الْقِرَاءَةُ - Benda", icon: "fa-pen" },
+        { arabic: "دُسْتُورٌ", latin: "Dustur", indo: "Pedoman / Undang-undang Hidup", category: "الْقِرَاءَةُ - Konsep", icon: "fa-balance-scale" },
+        { arabic: "عِيدُ الْفِطْرِ", latin: "'Idul Fitri", indo: "Hari Raya Idul Fitri", category: "الْقِرَاءَةُ - Hari Raya", icon: "fa-star-and-crescent" },
+        { arabic: "عِيدُ الْأَضْحَى", latin: "'Idul Adha", indo: "Hari Raya Idul Adha", category: "الْقِرَاءَةُ - Hari Raya", icon: "fa-drumstick-bite" },
+        { arabic: "شَهْرُ شَوَّالٍ", latin: "Syahru Syawwal", indo: "Bulan Syawwal", category: "الْقِرَاءَةُ - Waktu", icon: "fa-calendar" },
+        { arabic: "شَهْرُ ذِي الْحِجَّةِ", latin: "Syahru Dzil Hijjah", indo: "Bulan Dzulhijjah", category: "الْقِرَاءَةُ - Waktu", icon: "fa-kaaba" },
+        { arabic: "يُكَبِّرُونَ اللَّهَ", latin: "Yukabbirunallah", indo: "Mengumandangkan Takbir", category: "الْقِرَاءَةُ - Ibadah", icon: "fa-volume-up" },
+        { arabic: "الْمَيَادِينُ", latin: "Al-Mayadin", indo: "Lapangan-lapangan", category: "الْقِرَاءَةُ - Tempat", icon: "fa-map-marked-alt" },
+        { arabic: "صِلَةُ الرَّحِمِ", latin: "Silaturrahim", indo: "Menyambung Silaturahmi", category: "الْقِرَاءَةُ - Akhlak", icon: "fa-hands-helping" },
+        { arabic: "يَذْبَحُ الْأَضَاحِيَ", latin: "Yazbahul Adhahiya", indo: "Menyembelih Hewan Kurban", category: "الْقِرَاءَةُ - Ibadah", icon: "fa-leaf" },
+        { arabic: "الْفُقَرَاءُ وَالْمَسَاكِينُ", latin: "Al-Fuqara' wal Masakin", indo: "Fakir Miskin", category: "الْقِرَاءَةُ - Orang", icon: "fa-hand-holding-heart" },
+        { arabic: "التَّعَاوُنُ وَالتَّقَاسُمُ", latin: "At-Ta'awunu wat Taqasum", indo: "Tolong-menolong & Berbagi", category: "الْقِرَاءَةُ - Akhlak", icon: "fa-share-alt" },
+        { arabic: "التَّقْوَى", latin: "At-Taqwa", indo: "Ketakwaan kepada Allah", category: "الْقِرَاءَةُ - Ibadah", icon: "fa-gem" }
       ],
       hiwar: [
         { speaker: "فَاطِمَةُ", role: "Siswi A", avatarIcon: "fa-user-astronaut", arabic: "مَتَى نَزَلَ الْقُرْآنُ لِلْمَرَّةِ الأُوْلَى يَا عَائِشَةُ؟", translation: "Kapan Al-Qur'an turun pertama kali wahai Aisyah?" },
@@ -559,7 +562,7 @@ const arabicData = {
       id: 25, chapterId: 2, typeTag: "نُقْطَةُ التَّحَوُّلِ فِي النُّبُوَّةِ",
       audioText: "وَلَمَّا بَلَغَ عُمْرُهُ أَرْبَعِينَ سَنَةً بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُولًا",
       question: "مَا هُوَ الْحَدَثُ الْعَظِيْمُ الَّذِي حَدَثَ عِنْدَمَا بَلَغَ عُمْرُ النَّبِيِّ 40 سَنَةً؟",
-      options: ["سَافَرَ إِلَى الشَّامِ لِلتِّجَارَةِ", "بَعَثَهُ اللَّهُ نَبِيًّا وَرَسُوْلًا", "هَاجَرَ إِلَى الْمَدِيْنَةِ", "تُوُفِّيَ جَدُّهُ عَبْدُ الْمُطَّلِبِ"],
+      options: ["سَافَرَ إِلَى الشَّامِ لِلتِّجَارَةِ", "بَعَثَهُ اللَّهُ نَبِيًّا وَرَسُوْلًا", "هَاجَرَ إِلَى الْمَدِيْنَةِ", "تُوُفِّيَ جَدُّهُ عَبْدُ الْمُطَّلِبِ"],
       correct: 1, explanation: "فِي عُمْرِ 40 سَنَةً بَعَثَ اللَّهُ مُحَمَّدًا نَبِيًّا وَرَسُوْلًا."
     },
     {
@@ -664,7 +667,7 @@ const arabicData = {
       id: 40, chapterId: 2, typeTag: "تَحْلِيْلُ عُنْوَانِ الْمُحَاضَرَةِ",
       audioText: "وَتَحَدَّثَ الْأُسْتَاذُ عَنْ سِيرَةِ النَّبِيِّ مُنْذُ وِلَادَتِهِ إِلَى وَفَاتِهِ",
       question: "مَا هُوَ عُنْوَانُ الْمُحَاضَرَةِ الدِّيْنِيَّةِ فِي الْبَابِ الثَّانِي؟",
-      options: ["سِيْرَةُ النَّبِيِّ مُنْذُ وِلَادَتِهِ إِلَى وَفَاتِهِ", "الْهِجْرَةُ النَّبَوِيَّةُ", "نُزُوْلُ الْقُرْآنِ", "فَضْلُ عِيْدِ الْفِطْرِ"],
+      options: ["سِيْرَةُ النَّبِيِّ مُنْذُ وِلَادَتِهِ إِلَى وَفَاتِهِ", "الْهِجْرَةُ النَّبَوِيَّةُ", "نُزُوْلُ الْقُرْآنِ", "فَضْلُ عِيْدِ الْفِطْرِ"],
       correct: 0, explanation: "العُنْوَانُ هُوَ: 'سِيْرَةُ النَّبِيِّ مُنْذُ وِلَادَتِهِ إِلَى وَفَاتِهِ'."
     },
 
@@ -800,7 +803,7 @@ const arabicData = {
       audioText: "عِيدُ الْأَضْحَى فِي الْعَاشِرِ مِنْ شَهْرِ ذِي الْحِجَّةِ",
       question: "مَا اسْمُ الشَّهْرِ الَّذِي يَقَعُ فِيْهِ عِيْدُ الأَضْحَى؟",
       options: ["شَهْرُ ذِي الْحِجَّةِ", "شَهْرُ رَمَضَانَ", "شَهْرُ شَعْبَانَ", "شَهْرُ صَفَرٍ"],
-      correct: 0, explanation: "يَقَعُ عِيْدُ الأَضْحَى فِي 'شَهْرِ ذِي الْحِجَّةِ'."
+      correct: 0, explanation: "يَقَعُ عِيْدُ الأَضْحَى فِي 'شَهْرِ ذِي الْحِجَّةِ'."
     },
     {
       id: 60, chapterId: 3, typeTag: "تَحْلِيْلُ شُعُوْرِ الْمُسْلِمِيْنَ بِالْعِيْدِ",
@@ -996,7 +999,7 @@ const arabicData = {
       id: 30, chapterId: 3, skill: "مَهَارَةُ الْقِرَاءَةِ",
       question: "مَا هِيَ الْحِكْمَةُ الرَّئِيْسِيَّةُ مِنْ عِبَادَةِ الأُضْحِيَّةِ كَمَا فِي النَّصِّ؟",
       options: ["التَّفَاخُرُ بِالأَمْوَالِ", "الإِخْلَاصُ فِي الْعِبَادَةِ وَالتَّعَاوُنُ وَالتَّقَاسُمُ بَيْنَ النَّاسِ", "طَلَبُ الثَّنَاءِ مِنَ النَّاسِ", "جَمْعُ اللُّحُوْمِ فِي الْبَيْتِ"],
-      correct: 1, explanation: "تُعَلِّمُنَا الأُضْحِيَّةُ: 'الْإِخْلَاصَ فِي الْعِبَادَةِ وَالتَّعَاوُنَ وَالتَّقَاسُمَ'."
+      correct: 1, explanation: "تُعَلِّمُنَا الأُضْحِيَّةُ: 'الْإِخْلَاصَ فِي الْعِبَادَةِ وَالتَّعَاوُنَ وَالتَّقَاسُمَ'."
     }
   ]
 };

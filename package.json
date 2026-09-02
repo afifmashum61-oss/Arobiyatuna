@@ -1,0 +1,9 @@
+{
+  "name": "arobiyatuna",
+  "version": "1.0.0",
+  "description": "Media Pembelajaran Bahasa Arab Interaktif",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo Static Site Ready"
+  }
+}

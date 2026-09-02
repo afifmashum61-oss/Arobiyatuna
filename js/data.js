@@ -1,11 +1,11 @@
 /**
  * Data Store untuk Aplikasi Web Media Pembelajaran Bahasa Arab Interaktif (Arobiyatuna)
- * Bab 3 disesuaikan secara utuh (100% Lengkap) dengan Teks Resmi Nuzulul Qur'an & Dua Hari Raya:
- * - 20 Mufrodat per Bab (60 Mufrodat Total)
- * - 20 Dialog Hiwar per Bab dengan Ikon Orang / Avatar Interaktif
- * - 20 Soal Istima' Berpikir Kritis per Bab (60 Soal Istima' Total) dalam Bahasa Arab
- * - Qawa'id Bab 1: Tabel Tashrif Lughawi 14 Dhomir Fi'il Madhi "اِحْتَفَلَ" (احتفل)
- * - Kuis Evaluasi 30 Soal Multi-Maharah
+ * Bab 3 Qawa'id disesuaikan 100% dengan Gambar Rujukan Resmi:
+ * - Title: لَا النَّاهِيَة وَ لَمْ النَّافِيَة
+ * - Reference: (الشيخ مصطفى الغلاييني. جامع الدروس العربية. بيروت: دار الكتب العلمية، ٢٠١٢)
+ * - Tabel dengan background kuning (#FEFDE8), Fi'il Mudhari' disorot warna MERAH
+ * - Keterangan: Perhatikan perubahan fi'il mudhari' pada kolom di atas!
+ *   1. لَمْ di sini lam nafi yang berarti belum/tidak, sedangkan لَا adalah la nahiyah yang berarti jangan!. Keduanya masuk kepada fi'il mudhari' saja.
  */
 
 const arabicData = {
@@ -250,9 +250,9 @@ const arabicData = {
           {
             id: 1,
             instruction: "Susun kata-kata berikut mengenai usia Nabi saat diutus menjadi Rasul!",
-            words: ["بَعَثَ", "أَرْبَعِينَ", "سَنَةً", "عُمْرُهُ", "اللَّهُ", "نَبِيًّا", "بَلَغَ", "لَمَّا"],
-            correctOrder: ["لَمَّا", "بَلَغَ", "عُمْرُهُ", "أَرْبَعِينَ", "سَنَةً", "بَعَثَ", "اللَّهُ", "نَبِيًّا"],
-            arabicSentence: "لَمَّا بَلَغَ عُمْرُهُ أَرْبَعِينَ سَنَةً بَعَثَ اللَّهُ نَبِيًّا"
+            words: ["بَعَثَ", "أَرْبَعِينَ", "سَنَةً", "عُمْرُهُ", "اللَّهُ", "نَبِيًّا", "بَلَغَ", "لَمَّا"],
+            correctOrder: ["لَمَّا", "بَلَغَ", "عُمْرُهُ", "أَرْبَعِينَ", "سَنَةً", "بَعَثَ", "اللَّهُ", "نَبِيًّا"],
+            arabicSentence: "لَمَّا بَلَغَ عُمْرُهُ أَرْبَعِينَ سَنَةً بَعَثَ اللَّهُ نَبِيًّا"
           }
         ]
       }
@@ -387,19 +387,59 @@ const arabicData = {
         { speaker: "عَائِشَةُ", role: "Siswi B", avatarIcon: "fa-user-nurse", arabic: "يُهْدَى لِلأَقَارِبِ وَيُتَصَدَّقُ مِنْهُ عَلَى الْفُقَرَاءِ وَالْمَسَاكِيْنِ.", translation: "Dihadiahkan kepada kerabat dan disedekahkan kepada fakir miskin." }
       ],
       qawaid: {
-        title: "حُرُوفُ النَّفْيِ وَالنَّهْيِ وَالأَمْرِ (Penggunaan Kata Larangan & Perintah)",
-        explanation: "Dalam teks Bab 3 terdapat kalimat larangan dan perintah: اقْرَأْ (Bacalah! - Fi'il Amr), لَا يَجُوْزُ (Tidak boleh - Nafi/Nahi).",
+        title: "لَا النَّاهِيَة وَ لَمْ النَّافِيَة",
+        explanation: "Pelajaran Qawa'id Bab 3 membahas kaidah penggunaan **لَمْ (Lam Nafi)** yang berarti <em>belum/tidak</em> dan **لَا (La Nahiyah)** yang berarti <em>jangan!</em>. Keduanya masuk kepada <em>Fi'il Mudhari'</em> dan menyebabkannya menjadi <strong>Majzum</strong> (Sukun pada huruf akhir, atau membuang huruf Nun ن).",
+        rulesTable: {
+          title: "لَا النَّاهِيَة وَ لَمْ النَّافِيَة",
+          reference: "(الشيخ مصطفى الغلاييني. جامع الدروس العربية. بيروت: دار الكتب العلمية، ٢٠١٢)",
+          sections: [
+            {
+              particle: "لَمْ",
+              particleName: "لَمْ النَّافِيَة (Belum/Tidak)",
+              examples: [
+                { arabicPlain: "يُعَلِّمْ عَزِيْزٌ الدَّرْسَ", targetVerb: "يُعَلِّمْ", restSentence: "عَزِيْزٌ الدَّرْسَ", latin: "Yu'allim 'Azizun ad-Darsa", indo: "Aziz belum mengajar pelajaran" },
+                { arabicPlain: "يَجْتَمِعُوا فِي قَاعَةِ الْمَدْرَسَةِ", targetVerb: "يَجْتَمِعُوا", restSentence: "فِي قَاعَةِ الْمَدْرَسَةِ", latin: "Yajtami'ū fī qā'atil madrasah", indo: "Mereka belum berkumpul di aula sekolah" },
+                { arabicPlain: "تَسْتَغْفِرِي اللهَ", targetVerb: "تَسْتَغْفِرِي", restSentence: "اللهَ", latin: "Tastaghfirī Allāh", indo: "Kamu (Pr) belum memohon ampun kepada Allah" },
+                { arabicPlain: "أَتَحَدَّثْ اللُّغَةَ الْعَرَبِيَّةَ", targetVerb: "أَتَحَدَّثْ", restSentence: "اللُّغَةَ الْعَرَبِيَّةَ", latin: "Atahaddats al-Lughatal 'Arabiyyah", indo: "Saya belum berbicara Bahasa Arab" }
+              ]
+            },
+            {
+              particle: "لَا",
+              particleName: "لَا النَّاهِيَة (Jangan!)",
+              examples: [
+                { arabicPlain: "تَجْلِسْ عَلَى الْكُرْسِيِّ، يَا عَلِيُّ.", targetVerb: "تَجْلِسْ", restSentence: "عَلَى الْكُرْسِيِّ، يَا عَلِيُّ.", latin: "Tajlis 'alāl kursiyyi, yā 'Alī", indo: "Jangan duduk di atas kursi, wahai Ali!" },
+                { arabicPlain: "تَتَكَلَّمُوا أَثْنَاءَ الدَّرْسِ، يَا أَوْلَادُ.", targetVerb: "تَتَكَلَّمُوا", restSentence: "أَثْنَاءَ الدَّرْسِ، يَا أَوْلَادُ.", latin: "Tatakallamū atsnā'ad darsi, yā aulād", indo: "Jangan berbicara saat pelajaran, wahai anak-anak!" },
+                { arabicPlain: "تَشْرَبِي الْخَمْرَ، يَا فَاطِمَةُ، إنَّهَا حَرَامٌ.", targetVerb: "تَشْرَبِي", restSentence: "الْخَمْرَ، يَا فَاطِمَةُ، إنَّهَا حَرَامٌ.", latin: "Tasyrabīl khamra, yā Fātimah, innahā harām", indo: "Jangan minum khamr, wahai Fatimah, sesungguhnya itu haram!" },
+                { arabicPlain: "تُشَاهِدَا تِلْكَ الْمُبَارَاةَ، يَا حَسَنُ وَحُسَيْنُ.", targetVerb: "تُشَاهِدَا", restSentence: "تِلْكَ الْمُبَارَاةَ، يَا حَسَنُ وَحُسَيْنُ.", latin: "Tusyāhidā tilkal mubārāh, yā Hasan wa Husain", indo: "Jangan kalian berdua menonton pertandingan itu, wahai Hasan & Husain!" }
+              ]
+            }
+          ]
+        },
         examples: [
-          { pattern: "Fi'il Amr (Perintah)", sample: "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ", meaning: "Bacalah dengan menyebut nama Tuhanmu!" },
-          { pattern: "Nafi (Penolakan/Pengecualian)", sample: "الْقُرْآنُ لَيْسَ لِلْقِرَاءَةِ فَقَطْ", meaning: "Al-Qur'an bukan sekadar untuk dibaca saja" }
+          { pattern: "Fi'il Mudhari' + لَمْ (Lam Nafi)", sample: "يُعَلِّمْ عَزِيْزٌ الدَّرْسَ", meaning: "Aziz belum mengajar pelajaran (Fi'il Mudhari' Majzum)" },
+          { pattern: "Fi'il Mudhari' + لَا (La Nahiyah)", sample: "لَا تَجْلِسْ عَلَى الْكُرْسِيِّ، يَا عَلِيُّ", meaning: "Jangan duduk di atas kursi, wahai Ali! (Larangan)" }
         ],
         exercises: [
           {
             id: 1,
-            instruction: "Susun kata-kata berikut menjadi ayat pertama Al-Alaq!",
-            words: ["بِاسْمِ", "الَّذِي", "رَبِّكَ", "اقْرَأْ", "خَلَقَ"],
-            correctOrder: ["اقْرَأْ", "بِاسْمِ", "رَبِّكَ", "الَّذِي", "خَلَقَ"],
-            arabicSentence: "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ"
+            instruction: "Susun kata-kata berikut menjadi kalimat larangan sesuai tabel!",
+            words: ["يَا", "عَلِيُّ", "تَجْلِسْ", "الْكُرْسِيِّ", "عَلَى", "لَا"],
+            correctOrder: ["لَا", "تَجْلِسْ", "عَلَى", "الْكُرْسِيِّ", "يَا", "عَلِيُّ"],
+            arabicSentence: "لَا تَجْلِسْ عَلَى الْكُرْسِيِّ يَا عَلِيُّ"
+          },
+          {
+            id: 2,
+            instruction: "Susun kata-kata berikut menjadi kalimat penafian (Lam Nafi)!",
+            words: ["الدَّرْسَ", "عَزِيْزٌ", "يُعَلِّمْ", "لَمْ"],
+            correctOrder: ["لَمْ", "يُعَلِّمْ", "عَزِيْزٌ", "الدَّرْسَ"],
+            arabicSentence: "لَمْ يُعَلِّمْ عَزِيْزٌ الدَّرْسَ"
+          },
+          {
+            id: 3,
+            instruction: "Susun kata-kata berikut menjadi larangan berbicara saat pelajaran!",
+            words: ["أَثْنَاءَ", "الدَّرْسِ", "تَتَكَلَّمُوا", "أَوْلَادُ", "يَا", "لَا"],
+            correctOrder: ["لَا", "تَتَكَلَّمُوا", "أَثْنَاءَ", "الدَّرْسِ", "يَا", "أَوْلَادُ"],
+            arabicSentence: "لَا تَتَكَلَّمُوا أَثْنَاءَ الدَّرْسِ يَا أَوْلَادُ"
           }
         ]
       }
@@ -565,7 +605,7 @@ const arabicData = {
       audioText: "تُوُفِّيَتْ أُمُّهُ وَكَانَ عُمْرُهُ سِتَّ سِنِينَ فَرَبَّاهُ جَدُّهُ ثُمَّ عَمُّهُ أَبُو طَالِبٍ وَكَانَ عُمْرُهُ ثَمَانِيَ سِنِينَ",
       question: "مَا هُوَ التَّرْتِيْبُ الصَّحِيْحُ لِمَنْ رَبَّى النَّبِيَّ بَعْدَ وَفَاةِ أُمِّهِ آَمِنَةَ؟",
       options: ["رَبَّاهُ عَمُّهُ أَبُو طَالِبٍ أَوَّلًا ثُمَّ جَدُّهُ عَبْدُ الْمُطَّلِبِ", "رَبَّاهُ جَدُّهُ عَبْدُ الْمُطَّلِبِ (من 6-8 سِنِيْنَ) ثُمَّ عَمُّهُ أَبُو طَالِبٍ (من 8 سِنِيْنَ)", "رَبَّاهُ خَدِيْجَةُ رَضِيَ اللَّهُ عَنْهَا", "رَبَّاهُ أَبُو بَكْرٍ الصِّدِّيْقُ"],
-      correct: 1, explanation: "رَبَّاهُ جَدُّهُ عَبْدُ الْمُطَّلِبِ ثُمَّ عَمُّهُ أَبُو طَالِبٍ."
+      correct: 1, explanation: "رَبَّاهُ جَدُّهُ عَبْدُ الْمُطَّلِبِ ثُمَّ عَمُّهُ أَبُو طَالِبٍ."
     },
     {
       id: 23, chapterId: 2, typeTag: "تَحْلِيْلُ الْقُدْوَةِ فِي الْعَمَلِ",
@@ -719,7 +759,7 @@ const arabicData = {
     {
       id: 44, chapterId: 3, typeTag: "حِكْمَةُ نُزُوْلِ الْقُرْآنِ مَفْرُوقًا",
       audioText: "وَاسْتَمَرَّ نُزُولُ الْقُرْآنِ ثَلَاثًا وَعِشْرِينَ سَنَةً: ثَلَاثَ عَشْرَةَ سَنَةً فِي مَكَّةَ وَعَشْرَ سَنَوَاتٍ فِي الْمَدِينَةِ",
-      question: "كَمْ سَنَةً اسْتَمَرَّ نُزُوْلُ الْقُرْآنِ الْكَرِيْمِ عَلَى النَّبِيِّ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ؟",
+      question: "كَمْ سَنَةً اسْتَمَرَّ نُزُوْلُ الْقُرْآنِ الْكَرِيْمِ عَلَى النَّبِيِّ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ؟",
       options: ["10 سَنَوَاتٍ", "13 سَنَةً", "23 سَنَةً (13 فِي مَكَّةَ وَ10 فِي الْمَدِينَةِ)", "40 سَنَةً"],
       correct: 2, explanation: "اسْتَمَرَّ نُزُوْلُ الْقُرْآنِ 23 سَنَةً."
     },
@@ -842,7 +882,7 @@ const arabicData = {
     // --- BAB 1 QUESTIONS (1-10) ---
     {
       id: 1, chapterId: 1, skill: "المُفْرَدَاتُ",
-      question: "مَا مَعْنَى كَلِمَةِ 'مَلْعَبُ الْمَدْرَسَةِ' فِي اللُّغَةِ الإِنْدُونِيْسِيَّةِ؟",
+      question: "مَا مَعْنَى كَلِمَةِ 'مَلْعَبُ الْمَدْرَسَةِ' فِي اللُّغَةِ الإِينْدُونِيْسِيَّةِ؟",
       options: ["Perpustakaan Sekolah", "Lapangan Sekolah", "Ruang Guru", "Laboratorium Sekolah"],
       correct: 1, explanation: "'مَلْعَبُ الْمَدْرَسَةِ' تَعْنِي Lapangan Sekolah."
     },
@@ -916,7 +956,7 @@ const arabicData = {
     },
     {
       id: 13, chapterId: 2, skill: "المُفْرَدَاتُ",
-      question: "مَا مَعْنَى كَلِمَةِ 'رِعَايَةُ الْغَنَمِ' فِي اللُّغَةِ الإِنْدُونِيْسِيَّةِ؟",
+      question: "مَا مَعْنَى كَلِمَةِ 'رِعَايَةُ الْغَنَمِ' فِي اللُّغَةِ الإِينْدُونِيْسِيَّةِ؟",
       options: ["Perdagangan", "Menggembala Kambing", "Berhijrah", "Ceramah Agama"],
       correct: 1, explanation: "'رِعَايَةُ الْغَنَمِ' تَعْنِي Menggembala Kambing."
     },
@@ -1008,9 +1048,9 @@ const arabicData = {
     },
     {
       id: 28, chapterId: 3, skill: "مَهَارَةُ الْكِتَابَةِ (القَوَاعِدُ)",
-      question: "مَا هُوَ فِعْلُ الأَمْرِ الصَّحِيْحُ فِي بِدَايَةِ سُوْرَةِ الْعَلَقِ؟",
-      options: ["خَلَقَ", "عَلَّمَ", "اقْرَأْ", "نَزَلَ"],
-      correct: 2, explanation: "'اقْرَأْ' هُوَ فِعْلُ أَمْرٍ."
+      question: "مَا هِيَ الكَلِمَةُ الَّتِي تُفِيْدُ النَّهْيَ (Larangan) فِي لَا النَّاهِيَةِ؟",
+      options: ["لَمْ يُعَلِّمْ", "لَا تَجْلِسْ", "اقْرَأْ", "نَزَلَ"],
+      correct: 1, explanation: "'لَا تَجْلِسْ' هِيَ لَا النَّاهِيَةُ (Larangan)."
     },
     {
       id: 29, chapterId: 3, skill: "مَهَارَةُ الإِسْتِمَاعِ",

@@ -478,7 +478,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --------------------------------------------------------------------------
-  // Tab 5: Maharah Kitabah & Qawa'id (Grammar & 14 Dhomir Tashrif Table)
+  // Tab 5: Maharah Kitabah & Qawa'id (Grammar, Tashrif & Rules Table)
   // --------------------------------------------------------------------------
   function renderQawaid(chapter) {
     const container = document.getElementById("qawaid-container");
@@ -533,12 +533,66 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     }
 
+    let rulesTableHTML = "";
+    if (chapter.qawaid.rulesTable) {
+      const rt = chapter.qawaid.rulesTable;
+      rulesTableHTML = `
+        <div style="margin-top: 1.5rem; margin-bottom: 1.8rem;">
+          <div style="text-align: center; margin-bottom: 1rem;">
+            <h3 style="font-family: var(--font-arabic-heading); font-size: 2.2rem; color: var(--dark-bg); margin-bottom: 0.3rem;">
+              ${rt.title}
+            </h3>
+            <div style="font-size: 0.95rem; color: var(--text-muted); font-family: var(--font-arabic);">
+              ${rt.reference}
+            </div>
+          </div>
+
+          <table style="width: 100%; border-collapse: collapse; border: 2px solid #2C3E50; background-color: #FEFDE8; box-shadow: var(--shadow-md);">
+            <tbody>
+              ${rt.sections.map((sec) => `
+                <tr style="border-bottom: 2px solid #2C3E50;">
+                  <td style="padding: 1.5rem; border-right: 2px solid #2C3E50; text-align: center; direction: rtl; font-family: var(--font-arabic); font-size: 2.1rem; line-height: 2.3; width: 75%;">
+                    ${sec.examples.map(ex => `
+                      <div style="margin-bottom: 0.8rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #D5C28C; padding-bottom: 6px;">
+                        <button class="btn btn-outline-gold btn-sm play-rule-item-btn" data-text="${ex.arabicPlain}" style="padding: 2px 8px;">
+                          <i class="fas fa-volume-up"></i>
+                        </button>
+                        <div style="direction: rtl; text-align: right;">
+                          <span style="color: #E74C3C; font-weight: 800;">${ex.targetVerb}</span> ${ex.restSentence}
+                        </div>
+                      </div>
+                    `).join("")}
+                  </td>
+                  <td style="padding: 1.5rem; text-align: center; font-family: var(--font-arabic-heading); font-size: 3.8rem; font-weight: 800; color: var(--dark-bg); background-color: #FEFDE8; vertical-align: middle; width: 25%;">
+                    ${sec.particle}
+                    <div style="font-size: 0.88rem; font-family: var(--font-sans); font-weight: 600; color: var(--primary-gold-hover); margin-top: 4px;">
+                      ${sec.particleName}
+                    </div>
+                  </td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+
+          <div style="margin-top: 1.2rem; padding: 1.2rem; background-color: #FFF; border: 1.5px solid var(--border-color); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text-dark);">
+              Keterangan: Perhatikan perubahan <em>fi'il mudhari'</em> pada kolom di atas!
+            </div>
+            <div style="font-size: 1rem; color: var(--text-dark); line-height: 1.7;">
+              1. <strong style="font-family: var(--font-arabic); font-size: 1.4rem; color: var(--primary-gold-hover);">لَمْ</strong> di sini <em>lam nafi</em> yang berarti <strong>belum/tidak</strong>, sedangkan <strong style="font-family: var(--font-arabic); font-size: 1.4rem; color: var(--primary-gold-hover);">لَا</strong> adalah <em>la nahiyah</em> yang berarti <strong>jangan!</strong>. Keduanya masuk kepada <em>fi'il mudhari'</em> saja.
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     container.innerHTML = `
       <div class="qawaid-explanation-box">
         <h3 class="qawaid-title"><i class="fas fa-book-open"></i> ${chapter.qawaid.title}</h3>
         <p style="margin-bottom: 1rem; color: var(--text-dark);">${chapter.qawaid.explanation}</p>
         
         ${tashrifHTML}
+        ${rulesTableHTML}
 
         <h5 style="margin-bottom: 0.5rem; font-weight:700;">Contoh Penggunaan dalam Kalimat:</h5>
         <ul style="padding-left: 1.2rem; margin-bottom: 1rem;">
@@ -564,8 +618,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <div id="qawaid-exercises-list"></div>
     `;
 
-    // Setup Tashrif Table Audio Listeners
-    container.querySelectorAll(".play-tashrif-btn").forEach(btn => {
+    // Setup Tashrif & Rules Table Audio Listeners
+    container.querySelectorAll(".play-tashrif-btn, .play-rule-item-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const text = btn.dataset.text;
         if (window.ttsManager) window.ttsManager.speak(text);

@@ -1,0 +1,575 @@
+/* ==========================================================================
+   Components CSS: Mufrodat, Qira'ah, Kalam, Istima', Qawa'id, & Kuis
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Mufrodat Section & Flashcards
+   -------------------------------------------------------------------------- */
+.mufrodat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.vocab-card {
+  background-color: #FFF;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vocab-card:hover {
+  border-color: var(--primary-gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.vocab-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--light-surface);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.vocab-icon {
+  font-size: 2rem;
+  color: var(--primary-gold);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.vocab-arabic {
+  font-family: var(--font-arabic);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  direction: rtl;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.vocab-latin {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--primary-gold-hover);
+  margin-bottom: 0.3rem;
+}
+
+.vocab-indo {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.vocab-action {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-audio {
+  background-color: var(--gold-light);
+  color: var(--dark-bg);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-audio:hover {
+  background-color: var(--primary-gold);
+  color: #FFF;
+  transform: scale(1.08);
+}
+
+/* --------------------------------------------------------------------------
+   2. Maharah Qira'ah (Reading & Paragraph Audio Reciter)
+   -------------------------------------------------------------------------- */
+.qiraah-box {
+  background-color: #FFFDF9;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.qiraah-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-surface);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.8rem;
+  gap: 1rem;
+}
+
+.paragraph-card {
+  background: #FFF;
+  border-right: 4px solid var(--primary-gold);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.paragraph-card.speaking {
+  background-color: #FFFDF0;
+  border-right-color: var(--primary-gold-hover);
+  box-shadow: 0 0 15px rgba(197, 155, 39, 0.25);
+}
+
+.paragraph-arabic {
+  font-family: var(--font-arabic);
+  font-size: 2.2rem;
+  line-height: 2.2;
+  color: var(--text-dark);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.paragraph-arabic span.clickable-word {
+  cursor: pointer;
+  padding: 0 3px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.paragraph-arabic span.clickable-word:hover {
+  background-color: var(--gold-light);
+  color: var(--dark-bg);
+}
+
+.paragraph-translation {
+  font-size: 1rem;
+  color: var(--text-muted);
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--border-color);
+  display: block;
+}
+
+.paragraph-translation.hidden {
+  display: none;
+}
+
+.paragraph-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Maharah Kalam (Interactive Hiwar Dialogue & Person Avatar Icons)
+   -------------------------------------------------------------------------- */
+.hiwar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.hiwar-bubble {
+  display: flex;
+  gap: 1rem;
+  max-width: 85%;
+  align-items: flex-start;
+}
+
+.hiwar-bubble.speaker-a {
+  align-self: flex-start;
+}
+
+.hiwar-bubble.speaker-b {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.hiwar-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--dark-surface) 0%, var(--dark-bg) 100%);
+  color: var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: 2px solid var(--primary-gold);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.speaker-b .hiwar-avatar {
+  background: linear-gradient(135deg, var(--primary-gold-hover) 0%, var(--dark-bg) 100%);
+  color: #FFF;
+  border-color: var(--gold-light);
+}
+
+.hiwar-content-card {
+  background-color: #FFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.speaker-a .hiwar-content-card {
+  border-left: 4px solid var(--primary-gold);
+}
+
+.speaker-b .hiwar-content-card {
+  border-right: 4px solid var(--primary-gold-hover);
+  background-color: #FFFDF8;
+}
+
+.hiwar-speaker-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--primary-gold-hover);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hiwar-speaker-name i {
+  font-size: 1rem;
+}
+
+.hiwar-arabic {
+  font-family: var(--font-arabic);
+  font-size: 2rem;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.hiwar-translation {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.hiwar-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.8rem;
+}
+
+/* Voice Recorder Box */
+.recorder-box {
+  background-color: var(--dark-bg);
+  color: var(--gold-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.recorder-status {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.recording-pulse {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--danger-color);
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+  70% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   4. Maharah Istima' (Audio Listening Questions)
+   -------------------------------------------------------------------------- */
+.istima-card {
+  background-color: #FFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.audio-player-box {
+  background-color: var(--light-surface);
+  border: 2px dashed var(--primary-gold);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.audio-player-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.audio-player-info i {
+  font-size: 1.6rem;
+  color: var(--primary-gold);
+}
+
+/* --------------------------------------------------------------------------
+   5. Maharah Kitabah & Qawa'id (Grammar & Interactive Word Order)
+   -------------------------------------------------------------------------- */
+.qawaid-explanation-box {
+  background-color: #FFFDF6;
+  border: 1px solid var(--gold-light);
+  border-left: 5px solid var(--primary-gold);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.qawaid-title {
+  font-family: var(--font-arabic-heading);
+  font-size: 1.3rem;
+  color: var(--dark-bg);
+  margin-bottom: 0.5rem;
+}
+
+.word-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  direction: rtl;
+  min-height: 60px;
+  padding: 12px;
+  background-color: var(--light-surface);
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.word-chip {
+  background-color: var(--light-card);
+  border: 1.5px solid var(--primary-gold);
+  color: var(--text-dark);
+  font-family: var(--font-arabic);
+  font-size: 1.8rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.word-chip:hover {
+  background-color: var(--gold-light);
+  transform: scale(1.05);
+}
+
+.word-chip.selected {
+  background-color: var(--primary-gold);
+  color: var(--dark-bg);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   6. Comprehensive Evaluation Quiz & Results Modal
+   -------------------------------------------------------------------------- */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-bg);
+  color: var(--gold-light);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+}
+
+.quiz-timer {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+}
+
+.quiz-question-box {
+  background-color: #FFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-skill-tag {
+  display: inline-block;
+  background-color: var(--gold-light);
+  color: var(--dark-bg);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.quiz-question-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-option-btn {
+  background-color: var(--light-bg);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+  text-align: right;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-option-btn.arabic-option {
+  font-family: var(--font-arabic);
+  font-size: 1.7rem;
+  direction: rtl;
+}
+
+.quiz-option-btn:hover {
+  border-color: var(--primary-gold);
+  background-color: #FFFDF5;
+}
+
+.quiz-option-btn.selected {
+  border-color: var(--primary-gold);
+  background-color: var(--gold-light);
+  color: var(--dark-bg);
+}
+
+.quiz-option-btn.correct {
+  border-color: var(--success-color);
+  background-color: #E8F8F0;
+  color: #1E8449;
+}
+
+.quiz-option-btn.wrong {
+  border-color: var(--danger-color);
+  background-color: #FDEDEC;
+  color: #C0392B;
+}
+
+/* Certificate Result Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(34, 21, 12, 0.75);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.certificate-card {
+  background: #FFF;
+  border: 8px double var(--primary-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  background-image: radial-gradient(var(--gold-light) 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+}
+
+.certificate-title {
+  font-family: var(--font-arabic-heading);
+  font-size: 2.2rem;
+  color: var(--primary-gold-hover);
+  margin-bottom: 0.5rem;
+}
+
+.certificate-score {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--dark-bg);
+  margin: 1rem 0;
+}
+
+.certificate-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.breakdown-item {
+  background-color: var(--light-surface);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.breakdown-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.breakdown-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
